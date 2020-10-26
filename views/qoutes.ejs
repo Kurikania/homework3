@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 3</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <li><a href="/">Home</a></li>
+    <li><a href="about">About</a></li>
+    <li><a href="survey">Survey</a></li>
+    <li><a href="articles">Articles</a></li>
+    <li><a href="quotes">Quotes</a></li>
+    <li><a href="feedback">Feedback</a></li>
+  </nav>
+</header>
+  <main>
+    <section class = "title">
+      <div class="tab">
+      <pre>
+  ____              _            
+ / __ \            | |           
+| |  | |_   _  ___ | |_ ___  ___ 
+| |  | | | | |/ _ \| __/ _ \/ __|
+| |__| | |_| | (_) | ||  __/\__ \
+ \___\_\\__,_|\___/ \__\___||___/
+                                                                                         
+      </pre>
+    </div>
+    </section>
+    <section  class = "text-screen">
+        <h1>Here is your quote </h1>
+        <p><%= quote.quote %> </p> 
+        <p class = "author" > By <%= quote.author %> </p>
+        <button> <a href="quotes">Another!</a></button>
+    </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

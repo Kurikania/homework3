@@ -1,0 +1,207 @@
+body {
+  font-family: "Courier New";
+  font-weight: bold;
+  background-image: url("img/1b965c3c3b5df0517bdca4e0d95beb15.gif");
+  background-color:  #000106;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #00FF00;
+  margin: 0;
+}
+
+header {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  margin: 10px;
+	/* opacity: 0; */
+}
+
+ul,
+nav {
+	list-style: none;
+}
+
+header nav {
+	display: flex;
+}
+
+header nav li {
+	margin: 0 15px;
+}
+
+a {
+	text-decoration: none;
+	opacity: 0.75;
+	color:#00FF00;;
+}
+
+a:hover {
+  color: yellow;
+	opacity: 1;
+}
+
+section {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+
+button {
+  font-family: "Courier New";
+  background-color: black;
+  border: 3px solid #00FF00;
+  border-radius: 5px;
+  font-size: 2em;
+  display: block;
+  margin: 0 auto;
+  color: #00FF00;;
+}
+
+.buttons {
+  margin: 10px auto;
+  width: 50%;
+	display: flex;
+  justify-content: space-between;
+}
+
+@media  (max-width: 700px)  {
+  .buttons {
+    flex-direction: column;
+  }
+  button {
+    margin: 10px;
+  }
+
+}
+
+button:hover {
+  color: yellow;
+  border-color: yellow;
+}
+
+.title {
+  padding: 50px 50px;
+  text-align: center;
+  overflow: hidden;  
+  font-weight: bold;
+  /* margin: auto; */
+}
+
+.text-screen {
+  width: 70%;
+  margin: 10px auto 30px;
+}
+
+.tab {
+  display: none;
+  width: 70%;
+  margin: auto;
+}
+
+/* Article bgs */
+
+article{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+article p {
+  display: flex;
+  width: 70%;
+}
+
+img {
+  margin-top: -100px;
+  align-self: flex-end;
+  justify-self: right;
+  height: 200px;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.author {
+ font-style: italic;
+  }
+
+
+/* Form styles */
+
+form {
+  width: 70%;
+  margin: auto;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type=checkbox] {
+  display:none;
+}
+
+input[type=email], input[type=tel] , input[type=email]:valid , input[type=file]  {
+  margin: 10px;
+  width: 50%;
+  background-color: transparent;
+}
+
+  
+input.thing[type=checkbox] + label {
+  border-color: #00FF00;
+  border-style: solid;
+  border-radius: 3px;
+  height: 80px;
+  width: 80px;
+  display: block;
+  padding: 3px;
+  margin: 0 0 10px;
+}
+
+
+input.thing[type=checkbox]:checked + label {
+  border-color:yellow;
+  color: yellow;
+  border-style: solid;
+}
+
+input, textarea, select {
+  font-size: 1.2rem;
+  font-family: 'Courier New', monospace;
+  display: block;
+  background-color: transparent;
+  border-color: #00FF00;
+  border-style: solid;
+  border-radius: 3px;
+  margin: 3px auto; 
+  color: #00FF00;
+}
+
+input:required:invalid {
+  border-color: yellow;
+}
+
+select , input[type=date], input[type=file]  {
+  color: #00FF00;
+  padding: 10px;
+  font-size: 1.2em;
+  font-family: 'Courier New';
+  background-color: black;
+}
+label{
+  text-align: center;
+}
+
+.delete-btn {
+  font-size: 0.7em;
+  padding: 2px;
+  display: inline;
+  border-width: 1px;
+}
+
+ul li:not(nav){
+  font-size: 1.5rem;
+}

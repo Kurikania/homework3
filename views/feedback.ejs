@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 3</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body style="height: auto; background-image: none;">
+
+<header>
+  <nav>
+    <li><a href="/">Home</a></li>
+    <li><a href="about">About</a></li>
+    <li><a href="survey">Survey</a></li>
+    <li><a href="articles">Articles</a></li>
+    <li><a href="quotes">Quotes</a></li>
+    <li><a href="feedback">Feedback</a></li>
+  </nav>
+</header>
+<main>
+    <section class = "title">
+      <div>
+      <pre>
+        ______            _ ____             _    
+        |  ____|          | |  _ \           | |   
+        | |__ ___  ___  __| | |_) | __ _  ___| | __
+        |  __/ _ \/ _ \/ _` |  _ &lt; / _` |/ __| |/ /
+        | | |  __/  __/ (_| | |_) | (_| | (__|   &lt; 
+        |_|  \___|\___|\__,_|____/ \__,_|\___|_|\_\
+                                                   
+                                                                                                                                                          
+      </pre>
+    </div>
+    </section>
+        <section  class = "text-screen">
+            <h1>Leave a feedback!</h1>
+            <h2>I won't actually read it. Ever.</h2>
+            <div> 
+                <form id = "new-comment" action="/feedback" method="post">
+                <textarea name="comment[text]" id="" cols="50" rows="3"></textarea>
+                <button>Send</button>
+                </form>
+                <ul id = "comments-list"> 
+                    <% for(c of comment) { %> 
+                    <li> <%= c.text %> 
+                        <form class = "delete" style="display: inline" action="/feedback/<%= c._id %>?_method=DELETE" method="post">
+                            <button class = "delete-btn">Delete</button>
+                    </li>
+                    </form>
+                    <% }  %> 
+
+                    
+                </ul>
+                </div>
+                <div> 
+
+            </div>
+        </section>
+    </main>
+    <script
+		  src="https://code.jquery.com/jquery-3.1.1.min.js"
+		  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		  crossorigin="anonymous"></script>
+		  <script src="/ajax.js"></script>
+</body>
+</html>

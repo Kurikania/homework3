@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 3</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/f58b749f86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <li><a href="indexl">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="survey">Survey</a></li>
+        <li><a href="articles">Articles</a></li>
+        <li><a href="quotes">Quotes</a></li>
+        <li><a href="feedback">Feedback</a></li>
+    </nav>
+</header> 
+<main>
+<section class = "title">
+    <div class = "tab">
+    <pre>
+  _____                            
+ / ____|                           
+| (___  _   _ _ ____   _____ _   _ 
+ \___ \| | | | '__\ \ / / _ \ | | |
+ ____) | |_| | |   \ V /  __/ |_| |
+|_____/ \__,_|_|    \_/ \___|\__, |
+                              __/ |
+                             |___/ 
+                                                                                                                                                 
+    </pre>
+  </div>
+</section>
+<section> 
+    <div class = "tab">
+    <form method="POST" action="/finish.html">
+        <h2>What skills would you like to learn? </h2>
+    <div class = "checkboxes">
+        <input type="checkbox" class = "thing" name='thing1' id="thing1"/><label for="thing1"><i class="fab fa-js fa-4x"></i></label> 
+        <input type="checkbox" class = "thing" name='thing2' id="thing2"/><label for="thing2"><i class="fab fa-html5 fa-4x"></i></label> 
+        <input type="checkbox" class = "thing" name='thing3' id="thing3"/><label for="thing3"><i class="fab fa-css3 fa-4x"></i></label> 
+    </div>  
+    </div> 
+    <div class = "tab">
+    <h2>How many hours would you like to spend on studying per week?</h2>
+    <div> 
+        <select name="hours" id="hours" >
+            <option>0-2</option>
+            <option>2-10</option>
+            <option>10-30</option>
+            <option>40+</option>
+        </select>
+    </div>
+    </div>
+    <div class = "tab">
+        <h2>What makes you start learning web development? </h2>
+        <div> 
+    <textarea name="" id="" cols="50" rows="5"></textarea>
+        </div>
+        </div>
+    <div class = "tab">
+        <h2>When did you start learning web development</h2>
+        <div> 
+            <label for="date">Please enter exact date</label>
+            <input type="date" id = "date" name="date" required> 
+        </div>
+        </div>
+    <div class = "tab">
+        <h2>Please leave your contact information</h2>
+        <div> 
+            <label for="email">Enter your email</label>
+            <input required type="email" id = "email" name="email" placeholder="Enter a valid email address" ><br>
+            <label for="tel">Phone number</label>
+            <input required type= "tel" id="tel" name = "tel" placeholder="Enter your phone" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"> 
+        </div>
+    </div>
+    <div class = "tab">
+        <h2>Please add your pet picture</h2>
+        <div>                                                                                                       				
+			<label for="pet"></label>
+            <input type="file" id="pet" name = "pet" accept="image/*">
+            </div>
+			</div>
+        </div>
+    <div class = "buttons"> 
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Start</button>
+    </div>
+    </form> 
+</section>
+</main>  
+<script>
+    const nextLink = "location.href='finish.html'"
+  </script>
+<script src="app.js"></script>
+</body>
+</html>
