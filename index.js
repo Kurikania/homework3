@@ -39,8 +39,8 @@ app.get('/articles', (req, res) => {
     res.render('articles');
 })
 
-app.get('/feedback', (req, res) => {
-    Comment.find({}, function(err, comment){
+app.get('/feedback', async (req, res) => {
+    await Comment.find({}, function(err, comment){
         if(err){
           console.log(err);
         } else {
@@ -53,14 +53,14 @@ app.get('/feedback', (req, res) => {
       })
 })
 
-app.post('/feedback', (req, res) => {
+app.post('/feedback', async (req, res) => {
     var formData = req.body.comment;
-    Comment.create(formData, function(err, newComment){
+    await Comment.create(formData, function(err, newComment){
        if(err){
          console.log(err);
        } else { 
            if (req.xhr) {
-             res.json(newComment);
+            res.json(newComment);
            } else {
              res.redirect('/feedback');
            }
@@ -68,12 +68,12 @@ app.post('/feedback', (req, res) => {
      });
 })
 
-app.delete("/feedback/:id", function(req, res){
-    Comment.findById(req.params.id, function(err, comment){
+app.delete("/feedback/:id", async (req, res) => {
+    await  Comment.findById(req.params.id, function(err, comment){
       if(err){
         console.log(err);
       } else {
-         comment.remove();
+        comment.remove();
          res.redirect("/feedback");
       }
     }); 
